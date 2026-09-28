@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Ganadería de Sopachuy – Brahman y Nelore</title>
+<link href="https://fonts.googleapis.com/css2?family=Bitter:wght@500;700&family=Nunito+Sans:wght@400;600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#f1f4e8;--card:#fff;--ink:#1f2a1a;--mute:#556049;--green:#2f4a26;--moss:#6b8f3c;--hay:#d8b45a;--line:#d5dcc4;--on:#fff;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#141b11;--card:#1d2718;--ink:#eef2e3;--mute:#a7b596;--green:#a9c97a;--moss:#8fb45a;--line:#334029;--on:#141b11}}
+:root[data-theme="dark"]{--bg:#141b11;--card:#1d2718;--ink:#eef2e3;--mute:#a7b596;--green:#a9c97a;--moss:#8fb45a;--line:#334029;--on:#141b11}
+*,*:before,*:after{box-sizing:inherit}
+html{scroll-behavior:smooth;scroll-padding-top:calc(env(safe-area-inset-top,0px) + 64px)}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 17px/1.6 "Nunito Sans",system-ui,sans-serif}
+h1,h2,h3{font-family:Bitter,Georgia,serif;line-height:1.15;margin:0 0 .5em}
+a{color:inherit}
+header{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--card);border-bottom:1px solid var(--line)}
+.bar{max-width:1040px;margin:auto;padding:12px 20px;display:flex;justify-content:space-between;align-items:center;gap:12px}
+.logo{font:700 1.15rem Bitter,serif;text-decoration:none;color:var(--green)}
+nav{display:flex;gap:6px}
+nav a{padding:8px 14px;border-radius:99px;text-decoration:none;font-weight:600}
+nav a:hover,nav a:focus-visible{background:var(--moss);color:var(--on);outline:none}
+.wrap{max-width:1040px;margin:auto;padding:0 20px}
+section{padding:64px 0}
+.hero{position:relative;background:#e9dfb0;overflow:hidden}
+.hero svg.bg{display:block;width:100%;height:auto;min-height:340px;object-fit:cover}
+.hero .txt{position:absolute;inset:0;display:flex;align-items:center}
+.hero h1{font-size:clamp(2rem,6vw,3.6rem);color:#1f3318;max-width:14ch}
+.hero p{color:#2b3a22;max-width:34ch;font-size:1.1rem}
+.btn{display:inline-block;background:var(--green);color:var(--on);padding:12px 22px;border-radius:8px;font-weight:600;text-decoration:none;border:0;font:600 1rem "Nunito Sans",sans-serif;cursor:pointer}
+.hero .btn{background:#2f4a26;color:#fff}
+.btn:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible{outline:3px solid var(--hay);outline-offset:2px}
+.intro{display:grid;gap:24px;grid-template-columns:repeat(auto-fit,minmax(230px,1fr))}
+.intro p{margin:0;color:var(--mute)}
+.intro h3{font-size:1.15rem}
+.breeds{display:grid;gap:24px;grid-template-columns:repeat(auto-fit,minmax(300px,1fr))}
+.breed{background:var(--card);border:1px solid var(--line);border-radius:14px;overflow:hidden}
+.breed svg{display:block;width:100%;height:auto}
+.breed .in{padding:20px 22px 24px}
+.breed ul{padding-left:1.1em;margin:.6em 0;color:var(--mute)}
+.price{font:700 1.6rem Bitter,serif;color:var(--green);margin:.4em 0 0}
+.note{font-size:.9rem;color:var(--mute);margin:.2em 0 0}
+.alt{background:var(--card);border-block:1px solid var(--line)}
+.feeds{display:grid;gap:0;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));border-top:2px solid var(--moss)}
+.feed{padding:22px 22px 22px 0;display:flex;gap:16px;border-bottom:1px solid var(--line)}
+.feed svg{flex:none;width:48px;height:48px;color:var(--moss)}
+.feed h3{font-size:1.1rem;margin-bottom:.25em}
+.feed p{margin:0;color:var(--mute);font-size:.97rem}
+form{display:grid;gap:14px;max-width:560px}
+label{display:grid;gap:4px;font-weight:600;font-size:.95rem}
+input,select,textarea{font:inherit;padding:11px 12px;border:1px solid var(--line);border-radius:8px;background:var(--card);color:var(--ink);width:100%}
+footer{background:var(--green);color:var(--on);text-align:center;padding:26px 20px;font-size:.92rem}
+@media (max-width:520px){.hero .txt{align-items:flex-start;padding-top:20px}.bar{flex-direction:column}}
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+<defs>
+<symbol id="cow" viewBox="0 0 200 120">
+<path d="M40 50c0-14 14-24 32-24h60c20 0 34 10 34 26v22c0 6-4 10-10 10H50c-6 0-10-4-10-10z"/>
+<ellipse cx="66" cy="28" rx="19" ry="15"/>
+<path d="M156 44l30 10c6 2 8 8 4 12l-6 8c-3 4-9 4-13 1l-20-12z"/>
+<path d="M160 42c-12-10-26-6-32 0 10 8 22 8 32 0z"/>
+<path d="M172 46l8-10" stroke="currentColor" stroke-width="4" fill="none"/>
+<path d="M132 76c-2 12 4 18 10 18s8-8 4-18z"/>
+<rect x="50" y="80" width="11" height="34" rx="4"/><rect x="72" y="80" width="11" height="34" rx="4"/>
+<rect x="126" y="80" width="11" height="34" rx="4"/><rect x="148" y="80" width="11" height="34" rx="4"/>
+<path d="M40 54c-12 6-14 22-8 36" stroke="currentColor" stroke-width="4" fill="none"/>
+</symbol>
+</defs>
+</svg>
+
+<header>
+<div class="bar">
+<a class="logo" href="#inicio">Ganadería del Valle</a>
+<nav aria-label="Principal"><a href="#inicio">Inicio</a><a href="#ganaderia">Ganadería</a><a href="#alimentos">Alimentos</a><a href="#contacto">Contacto</a></nav>
+</div>
+</header>
+
+<main>
+<section id="inicio" style="padding:0">
+<div class="hero">
+<svg class="bg" viewBox="0 0 1000 420" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Pradera con ganado al atardecer">
+<defs><linearGradient id="sky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#f6e7b0"/><stop offset="1" stop-color="#f4c98a"/></linearGradient></defs>
+<rect width="1000" height="420" fill="url(#sky)"/>
+<circle cx="800" cy="120" r="56" fill="#f7a94b" opacity=".9"/>
+<path d="M0 250C150 190 300 210 450 240s300-40 550-10v190H0z" fill="#9db866"/>
+<path d="M0 300C200 260 380 290 560 300s300-20 440-8v128H0z" fill="#6b8f3c"/>
+<path d="M0 360C250 330 500 350 1000 335v85H0z" fill="#4a6b2a"/>
+<g stroke="#5a3f28" stroke-width="5"><path d="M0 330h1000M60 305v50M200 305v50M340 305v50M480 305v50M620 305v50M760 305v50M900 305v50"/></g>
+<use href="#cow" x="560" y="250" width="190" height="114" style="color:#e8e4d8"/>
+<use href="#cow" x="740" y="270" width="150" height="90" style="color:#8a8175"/>
+<use href="#cow" x="880" y="285" width="110" height="66" style="color:#e8e4d8"/>
+</svg>
+<div class="txt"><div class="wrap">
+<h1>Ganado Brahman y Nelore, criado a campo</h1>
+<p>Animales sanos, con pasto y manejo natural. Consulta disponibilidad y precios.</p>
+<a class="btn" href="#contacto">Consultar por WhatsApp</a>
+</div></div>
+</div>
+<div class="wrap" style="padding-top:56px;padding-bottom:8px">
+<div class="intro">
+<div><h3>Razas adaptadas al calor</h3><p>Brahman y Nelore resisten bien el sol, las garrapatas y los pastos de clima cálido.</p></div>
+<div><h3>Alimentación planificada</h3><p>Combinamos pastoreo, forraje conservado y suplementos según la etapa del animal.</p></div>
+<div><h3>Trato directo</h3><p>Hablas con el productor. Coordinamos visita, selección y entrega.</p></div>
+</div>
+</div>
+</section>
+
+<section id="ganaderia">
+<div class="wrap">
+<h2>Ganadería</h2>
+<div class="breeds">
+<article class="breed">
+<svg viewBox="0 0 400 220" role="img" aria-label="Toro Brahman en la pradera"><rect width="400" height="220" fill="#dbe7b8"/><circle cx="330" cy="50" r="26" fill="#f2d27a"/><path d="M0 150c100-30 200-20 400 0v70H0z" fill="#8fae56"/><use href="#cow" x="70" y="60" width="270" height="162" style="color:#9a9187"/></svg>
+<div class="in">
+<h3>Brahman</h3>
+<ul><li>Joroba marcada y orejas largas</li><li>Muy resistente al calor y a parásitos</li><li>Buena madre y buena producción de carne</li></ul>
+<p class="price">USD 25.000</p>
+<p class="note">Precio estimado. Se confirma según edad, peso y cantidad.</p>
+</div>
+</article>
+<article class="breed">
+<svg viewBox="0 0 400 220" role="img" aria-label="Toro Nelore en la pradera"><rect width="400" height="220" fill="#e6efc9"/><circle cx="70" cy="50" r="26" fill="#f2d27a"/><path d="M0 150c120-25 240-25 400 5v65H0z" fill="#7fa04a"/><use href="#cow" x="60" y="60" width="270" height="162" style="color:#f1eee6"/></svg>
+<div class="in">
+<h3>Nelore</h3>
+<ul><li>Pelaje blanco o gris claro</li><li>Buen rendimiento de carcasa</li><li>Se adapta bien a pastoreo extensivo</li></ul>
+<p class="price">USD 25.000</p>
+<p class="note">Precio estimado. Se confirma según edad, peso y cantidad.</p>
+</div>
+</article>
+</div>
+</div>
+</section>
+
+<section id="alimentos" class="alt">
+<div class="wrap">
+<h2>Alimentos y sistemas de alimentación</h2>
+<div class="feeds">
+<div class="feed"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M6 38h36M12 38c0-8 2-14 4-20M22 38c0-10 0-16 2-24M32 38c-1-8 0-14 3-18M40 38c0-6-1-10-3-13"/></svg><div><h3>Pastoreo rotativo</h3><p>El ganado pasa por potreros en turnos. El pasto se recupera y rinde más durante el año.</p></div></div>
+<div class="feed"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><ellipse cx="24" cy="14" rx="14" ry="6"/><path d="M10 14v20c0 3 6 6 14 6s14-3 14-6V14M10 24c0 3 6 6 14 6s14-3 14-6"/></svg><div><h3>Ensilaje</h3><p>Maíz o sorgo picado y fermentado. Sirve como reserva en la época seca.</p></div></div>
+<div class="feed"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><rect x="8" y="14" width="32" height="22" rx="11"/><path d="M8 25h32M16 14c0 8 0 14 0 22M32 14c0 8 0 14 0 22"/></svg><div><h3>Heno y pacas</h3><p>Pasto cortado y secado. Práctico para almacenar y transportar.</p></div></div>
+<div class="feed"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M6 20h36l-4 18H10zM14 20l4-8h12l4 8"/><path d="M20 28h8"/></svg><div><h3>Sales minerales y suplementos</h3><p>Aportan fósforo, calcio y micronutrientes que el pasto no cubre.</p></div></div>
+<div class="feed"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M6 40V20l18-10 18 10v20M6 40h36M16 40V28h16v12"/></svg><div><h3>Engorde en corral</h3><p>Ración balanceada de granos y forraje para terminar animales en menos tiempo.</p></div></div>
+<div class="feed"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M24 6c8 8 12 14 12 20a12 12 0 0 1-24 0c0-6 4-12 12-20z"/><path d="M18 28c0 4 3 6 6 6"/></svg><div><h3>Agua y bebederos</h3><p>Agua limpia y fresca todo el día. Es la base de cualquier plan de alimentación.</p></div></div>
+</div>
+</div>
+</section>
+
+<section id="contacto">
+<div class="wrap">
+<h2>Contacto</h2>
+<p style="color:var(--mute);max-width:52ch">Completa el formulario y te abrirá WhatsApp con el mensaje listo para enviar.</p>
+<form id="f">
+<label>Nombre<input id="n" required autocomplete="name"></label>
+<label>Tu teléfono<input id="t" type="tel" autocomplete="tel"></label>
+<label>Me interesa
+<select id="i"><option>Ganado Brahman</option><option>Ganado Nelore</option><option>Alimentos y suplementos</option><option>Asesoría en alimentación</option></select></label>
+<label>Mensaje<textarea id="m" rows="4" placeholder="Cantidad, edad, zona de entrega..."></textarea></label>
+<a id="wa" class="btn" href="https://wa.me/59168627470" target="_blank" rel="noopener">Enviar por WhatsApp</a>
+</form>
+</div>
+</section>
+</main>
+
+<footer>Ganadería del Valle · Venta de ganado y alimentación · WhatsApp 68627470</footer>
+
+<script>
+(function(){
+var f=document.getElementById('f'),a=document.getElementById('wa');
+function g(id){return document.getElementById(id).value.trim()}
+function upd(){
+var txt='Hola, soy '+(g('n')||'un cliente')+(g('t')?' (tel. '+g('t')+')':'')+'. Me interesa: '+g('i')+'.'+(g('m')?' '+g('m'):'');
+a.href='https://wa.me/59168627470?text='+encodeURIComponent(txt);
+}
+f.addEventListener('input',upd);f.addEventListener('change',upd);
+f.addEventListener('submit',function(e){e.preventDefault()});
+upd();
+})();
+</script>
+</body>
+</html>
